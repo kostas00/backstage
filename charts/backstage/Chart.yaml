@@ -1,0 +1,22 @@
+apiVersion: v2
+
+name: backstage
+version: 0.1.0
+description: |
+  A Helm chart for backstage, installation is done using Helm charts of backstage and postgresql.
+
+  ## TO test
+
+  - How to enable a new plugin, can we do it using volumes?
+  
+  ## TODO
+
+  - Use a custom image for backstage
+  - Use production ready postgresql
+  - Expose application using Istio ingress gateway
+  - Add SSO support
+dependencies:
+  - name: backstage
+    version: 1.8.1
+    repository: https://backstage.github.io/charts
+    condition: backstage.enabled
